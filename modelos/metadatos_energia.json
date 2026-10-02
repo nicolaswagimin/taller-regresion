@@ -1,0 +1,145 @@
+{
+  "ejercicio": "Energía",
+  "variables": [
+    "Temperatura",
+    "Hora",
+    "Dia_Semana"
+  ],
+  "objetivo": "Consumo_Energia",
+  "unidad_objetivo": "kWh",
+  "etiquetas": {
+    "Temperatura": "Temperatura (°C)",
+    "Hora": "Hora del día (1 a 24)",
+    "Dia_Semana": "Día de la semana (1 = lunes ... 7 = domingo)",
+    "Consumo_Energia": "Consumo de energía (kWh)"
+  },
+  "intercepto": 101.28823172887479,
+  "coeficientes": {
+    "Temperatura": 9.95286590779166,
+    "Hora": 5.019813389575863,
+    "Dia_Semana": -3.0311766574336456
+  },
+  "coef_estandarizados": {
+    "Temperatura": 0.7802901822787958,
+    "Hora": 0.5464071944729576,
+    "Dia_Semana": -0.09543221882395816
+  },
+  "p_valores": {
+    "Temperatura": 0.0,
+    "Hora": 0.0,
+    "Dia_Semana": 1.0412857806296403e-155
+  },
+  "ic95": {
+    "Temperatura": [
+      9.865069463541586,
+      10.040662352041727
+    ],
+    "Hora": [
+      4.956579049029638,
+      5.083047730122087
+    ],
+    "Dia_Semana": [
+      -3.2497640524280036,
+      -2.812589262439292
+    ]
+  },
+  "ecuacion": "Consumo_Energia = 101.2882 + 9.9529*Temperatura + 5.0198*Hora - 3.0312*Dia_Semana",
+  "metricas": {
+    "entrenamiento": {
+      "MSE": 399.1936567789163,
+      "RMSE": 19.979831250011006,
+      "R2": 0.9014539402878962
+    },
+    "prueba": {
+      "MSE": 429.5186917603558,
+      "RMSE": 20.72483273178232,
+      "R2": 0.8968196536749335
+    }
+  },
+  "rangos": {
+    "Temperatura": {
+      "min": 5.387998741908287,
+      "max": 44.63118853218163,
+      "media": 24.92479311658316
+    },
+    "Hora": {
+      "min": 1.0,
+      "max": 24.0,
+      "media": 12.4936
+    },
+    "Dia_Semana": {
+      "min": 1.0,
+      "max": 7.0,
+      "media": 3.9994
+    },
+    "Consumo_Energia": {
+      "min": 185.1963838339356,
+      "max": 631.0931909290265,
+      "media": 400.0435223457631
+    }
+  },
+  "limites_validos": {
+    "Temperatura": [
+      -50,
+      60
+    ],
+    "Hora": [
+      1,
+      24
+    ],
+    "Dia_Semana": [
+      1,
+      7
+    ]
+  },
+  "variables_enteras": [
+    "Hora",
+    "Dia_Semana"
+  ],
+  "n_entrenamiento": 8000,
+  "n_prueba": 2000,
+  "random_state": 42,
+  "version_sklearn": "1.9.1",
+  "correlaciones_objetivo": {
+    "Temperatura": 0.7719154663838063,
+    "Hora": 0.5289633405020843,
+    "Dia_Semana": -0.10218745253518409
+  },
+  "atipicos_iqr": {
+    "Temperatura": 90,
+    "Hora": 0,
+    "Dia_Semana": 0,
+    "Consumo_Energia": 66
+  },
+  "extra": {
+    "comparacion_hora": {
+      "A. Principal (Hora lineal)": {
+        "RMSE entrenamiento": 19.979831250011006,
+        "R2 entrenamiento": 0.9014539402878962,
+        "RMSE prueba": 20.72483273178232,
+        "R2 prueba": 0.8968196536749335
+      },
+      "B. Hora como seno/coseno": {
+        "RMSE entrenamiento": 29.461128977947713,
+        "R2 entrenamiento": 0.7857334370594207,
+        "RMSE prueba": 29.906613084082082,
+        "R2 prueba": 0.7851430644321611
+      },
+      "C. Hora lineal + seno/coseno": {
+        "RMSE entrenamiento": 19.976807343487458,
+        "R2 entrenamiento": 0.9014837675190382,
+        "RMSE prueba": 20.725990090022258,
+        "R2 prueba": 0.8968081293398601
+      }
+    },
+    "p_valores_version_c": {
+      "Temperatura": 0.0,
+      "Hora": 0.0,
+      "Dia_Semana": 8.205939574438007e-156,
+      "Hora_sen": 0.9051332839937007,
+      "Hora_cos": 0.12016138305585518
+    },
+    "consumo_promedio_hora_1": 347.9549755631662,
+    "consumo_promedio_hora_24": 459.0650646946912
+  }
+}

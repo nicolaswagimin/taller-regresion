@@ -1,0 +1,114 @@
+{
+  "ejercicio": "Dólar",
+  "variables": [
+    "Dia",
+    "Inflacion",
+    "Tasa_interes"
+  ],
+  "objetivo": "Precio_Dolar",
+  "unidad_objetivo": "pesos",
+  "etiquetas": {
+    "Dia": "Día (número de día)",
+    "Inflacion": "Inflación diaria (proporción)",
+    "Tasa_interes": "Tasa de interés diaria (%)",
+    "Precio_Dolar": "Precio del dólar (pesos)"
+  },
+  "intercepto": 3985.7832908942446,
+  "coeficientes": {
+    "Dia": 4.984338715884639,
+    "Inflacion": -870.7317083114694,
+    "Tasa_interes": -1.3774312878081227
+  },
+  "coef_estandarizados": {
+    "Dia": 0.9975678768755011,
+    "Inflacion": -0.006083410883003839,
+    "Tasa_interes": -0.0009405138896582383
+  },
+  "p_valores": {
+    "Dia": 0.0,
+    "Inflacion": 0.09596653401381247,
+    "Tasa_interes": 0.7972478128005591
+  },
+  "ic95": {
+    "Dia": [
+      4.9484489080418985,
+      5.020228523723953
+    ],
+    "Inflacion": [
+      -1896.5788073958522,
+      155.11539077284237
+    ],
+    "Tasa_interes": [
+      -11.910942134943062,
+      9.156079559325795
+    ]
+  },
+  "ecuacion": "Precio_Dolar = 3985.7833 + 4.9843*Dia - 870.7317*Inflacion - 1.3774*Tasa_interes",
+  "metricas": {
+    "entrenamiento": {
+      "MSE": 2580.462030262353,
+      "RMSE": 50.79824829915253,
+      "R2": 0.9947566971157091
+    },
+    "prueba": {
+      "MSE": 2376.9708765724727,
+      "RMSE": 48.7541882977501,
+      "R2": 0.9963128117569109
+    }
+  },
+  "rangos": {
+    "Dia": {
+      "min": 1.0,
+      "max": 500.0,
+      "media": 250.5
+    },
+    "Inflacion": {
+      "min": 0.0037936632996546,
+      "max": 0.0392636574532736,
+      "media": 0.02003418997294319
+    },
+    "Tasa_interes": {
+      "min": 3.6515566785292144,
+      "max": 6.316191032418695,
+      "media": 5.015913058528001
+    },
+    "Precio_Dolar": {
+      "min": 3940.361344787676,
+      "max": 6553.5985827644245,
+      "media": 5211.771933901323
+    }
+  },
+  "limites_validos": {
+    "Dia": [
+      1,
+      null
+    ],
+    "Inflacion": [
+      0,
+      1
+    ],
+    "Tasa_interes": [
+      0,
+      100
+    ]
+  },
+  "variables_enteras": [
+    "Dia"
+  ],
+  "n_entrenamiento": 400,
+  "n_prueba": 100,
+  "random_state": 42,
+  "version_sklearn": "1.9.1",
+  "correlaciones_objetivo": {
+    "Dia": 0.9975794994930401,
+    "Inflacion": 0.019594608928443683,
+    "Tasa_interes": 0.07429859928905615
+  },
+  "atipicos_iqr": {
+    "Dia": 0,
+    "Inflacion": 4,
+    "Tasa_interes": 7,
+    "Precio_Dolar": 0
+  },
+  "extra": {}
+}

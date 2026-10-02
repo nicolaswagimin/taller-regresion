@@ -1,0 +1,112 @@
+{
+  "ejercicio": "Glucosa",
+  "variables": [
+    "Edad",
+    "IMC",
+    "Actividad_Fisica"
+  ],
+  "objetivo": "Nivel_Glucosa",
+  "unidad_objetivo": "mg/dL",
+  "etiquetas": {
+    "Edad": "Edad (años)",
+    "IMC": "Índice de masa corporal (kg/m²)",
+    "Actividad_Fisica": "Actividad física (horas por semana)",
+    "Nivel_Glucosa": "Nivel de glucosa (mg/dL)"
+  },
+  "intercepto": 65.86086530452523,
+  "coeficientes": {
+    "Edad": 1.226590034499573,
+    "IMC": 0.9333730560350992,
+    "Actividad_Fisica": -2.0852763430432817
+  },
+  "coef_estandarizados": {
+    "Edad": 0.7873655881000831,
+    "IMC": 0.13587765135386973,
+    "Actividad_Fisica": -0.22288223396670193
+  },
+  "p_valores": {
+    "Edad": 0.0,
+    "IMC": 1.312582213849161e-21,
+    "Actividad_Fisica": 6.515352759340722e-53
+  },
+  "ic95": {
+    "Edad": [
+      1.1837343878854802,
+      1.2694456811136627
+    ],
+    "IMC": [
+      0.7444069508514087,
+      1.1223391612187867
+    ],
+    "Actividad_Fisica": [
+      -2.3426360375682855,
+      -1.8279166485182794
+    ]
+  },
+  "ecuacion": "Nivel_Glucosa = 65.8609 + 1.2266*Edad + 0.9334*IMC - 2.0853*Actividad_Fisica",
+  "metricas": {
+    "entrenamiento": {
+      "MSE": 235.51368494080378,
+      "RMSE": 15.346455126210866,
+      "R2": 0.686212181790227
+    },
+    "prueba": {
+      "MSE": 233.69300045085828,
+      "RMSE": 15.28702065318348,
+      "R2": 0.681371586540484
+    }
+  },
+  "rangos": {
+    "Edad": {
+      "min": 20.0,
+      "max": 79.0,
+      "media": 49.157
+    },
+    "IMC": {
+      "min": 10.586716611072555,
+      "max": 39.43022745196606,
+      "media": 24.96332852372851
+    },
+    "Actividad_Fisica": {
+      "min": 0.0,
+      "max": 9.0,
+      "media": 4.6645
+    },
+    "Nivel_Glucosa": {
+      "min": 43.415923806929655,
+      "max": 227.56069265401652,
+      "media": 139.6301292343726
+    }
+  },
+  "limites_validos": {
+    "Edad": [
+      0,
+      120
+    ],
+    "IMC": [
+      5,
+      80
+    ],
+    "Actividad_Fisica": [
+      0,
+      168
+    ]
+  },
+  "variables_enteras": [],
+  "n_entrenamiento": 1600,
+  "n_prueba": 400,
+  "random_state": 42,
+  "version_sklearn": "1.9.1",
+  "correlaciones_objetivo": {
+    "Edad": 0.7897924483923403,
+    "IMC": 0.13831772372658327,
+    "Actividad_Fisica": -0.1983945125735618
+  },
+  "atipicos_iqr": {
+    "Edad": 0,
+    "IMC": 16,
+    "Actividad_Fisica": 0,
+    "Nivel_Glucosa": 3
+  },
+  "extra": {}
+}

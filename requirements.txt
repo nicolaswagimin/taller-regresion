@@ -1,0 +1,17 @@
+# Versiones fijas, iguales a las del entorno donde se entrenaron los modelos.
+# scikit-learn debe coincidir para que los .joblib/.pkl carguen sin problemas.
+scikit-learn==1.9.1
+joblib==1.6.0
+numpy==2.5.3
+pandas==3.0.6
+streamlit==1.64.0
+
+# Notebooks, gráficas e informe (no los usa la app, sí el resto del proyecto)
+matplotlib==3.11.2
+seaborn==0.13.2
+statsmodels==0.15.0
+ipykernel==7.4.0
+nbformat==5.11.1
+nbclient==0.11.0
+nbconvert==7.17.1
+python-docx==1.2.0
